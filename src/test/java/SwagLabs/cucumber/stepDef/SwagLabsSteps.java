@@ -55,6 +55,7 @@ public class SwagLabsSteps {
         WebElement products = driver.findElement(By.xpath("//span[@class='title']"));
         String productsText = products.getText();
         System.out.println(productsText);
+        driver.close();
     }
 
     @And(": User input empty password")
@@ -68,6 +69,7 @@ public class SwagLabsSteps {
         WebElement epicSadfacemessage = driver.findElement(By.xpath("//h3[normalize-space()='Epic sadface: Password is required']"));
         String epicSadfacemessageText = epicSadfacemessage.getText();
         System.out.println(epicSadfacemessageText);
+        driver.close();
     }
 
     @Given(": User successfully to login page")
@@ -125,6 +127,7 @@ public class SwagLabsSteps {
         String checkoutYourInformationText = checkoutYourInformation.getText();
         System.out.println(checkoutYourInformationText);
         Assert.assertEquals("Checkout: Your Information",checkoutYourInformationText);
+        driver.close();
     }
 
     @Then(": User should get error warning that product not selected")
@@ -132,6 +135,7 @@ public class SwagLabsSteps {
         WebElement checkoutfailmessage = driver.findElement(By.xpath("//h3[normalize-space()='You dont have product to checkout']"));
         String checkoutfailmessageText = checkoutfailmessage.getText();
         System.out.println(checkoutfailmessageText);
+        driver.close();
     }
 
     @Given("user already login into website")
